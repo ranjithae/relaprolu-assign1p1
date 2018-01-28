@@ -19,7 +19,7 @@ def post_list(request, tag_slug=None):
 
     paginator = Paginator(object_list, 3)  # 3 posts in each page
     page = request.GET.get('page')
-    
+
     try:
         posts = paginator.page(page)
     except PageNotAnInteger:
